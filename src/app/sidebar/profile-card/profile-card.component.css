@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    border-top: 1px solid black;
+    width: 244px;
+}
+
+img {
+    width: 38px;
+    height: 38px;
+    border-radius: 5em;
+}
+
+h4, p {
+    margin: .5rem;
+    padding: .5rem;
+}
