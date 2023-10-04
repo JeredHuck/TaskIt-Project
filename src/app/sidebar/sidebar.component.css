@@ -9,18 +9,18 @@ html {
     position: fixed;
     left: 0px;
     top: 0px;
-    background-color: aquamarine;
+    background-color: hsla(146, 6%, 78%, 0.753);
     border-right: 1px solid black;
     width: 244px;
 }
 
 #logo {
     margin: 40px;
-    margin-left: 67px;
+    margin-left: 55px;
 }
 
 .button {
     width: 50vw;
-    margin: 10px;
-    margin-left: 61px;
+    margin: 50px;
+    margin-left: 35px;
 }
