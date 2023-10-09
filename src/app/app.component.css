@@ -3,3 +3,10 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+.vgItem {
+  color: red;
+  display: flex;
+  flex-direction: column;
+  margin-left: 30rem;
+}

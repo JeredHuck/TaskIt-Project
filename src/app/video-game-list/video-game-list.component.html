@@ -1,14 +1,17 @@
 <div class="container">
-  <div class="row-cols-md-2">
-    <h1>Video Games</h1>
-    <button class="btn btn-primary">Add Game</button>
+  <h1 class=>Video Game List</h1>
+  <div>
+    <button class="btn btn-success btn-sm new-vg-btn mt-1"
+    (click)="onNewGame()">Add New Video Game</button>
+    <h3>Title</h3>
+    <h3>Description</h3>
   </div>
-  <ul class="list-group">
-    <li class="list-group-item"></li>
-    <li class="list-group-item"></li>
-    <li class="list-group-item"></li>
-    <li class="list-group-item"></li>
-    <li class="list-group-item"></li>
-    <li class="list-group-item"></li>
-  </ul>
 </div>
+
+<div
+    class="flex-container"
+    *ngFor="let videoGame of videoGames">
+    <p id="title">{{ videoGame.title + ' ' }}</p>
+    <p id="description">{{ videoGame.description }}</p>
+</div>
+

@@ -1,31 +1,31 @@
-* {
- margin: 0;
-
+.infoBar {
+  display: flex;
+  flex-direction: row;
+  margin-left: 50px;
 }
 
 .container {
-  margin: 10rem 300px 20px 450px;
-  width: 80%;
+  margin-left: 30rem;
+  margin-top: 8rem;
 }
 
-li {
-  padding: 2rem;
-  width: 150%;
+.btn {
+  margin: 10px;
 }
 
-.row-cols-md-2 {
+.title {
+  margin: 20px;
+  padding: 20px;
+}
+
+.description {
+  margin: 20px;
+  padding: 20px;
+}
+
+.flex-container {
   display: flex;
-  flex-direction: left;
-  padding: 0;
-}
-
-h1 {
-  margin: 0;
-  padding: 0;
-}
-
-button {
-  padding: 0;
-  width: 20%;
-  margin-left: .5rem;
+  flex-direction: row;
+  flex: auto;
+  margin: 5rem;
 }

@@ -5,16 +5,22 @@ import { AppComponent } from './app.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 import { ProfileCardComponent } from './sidebar/profile-card/profile-card.component';
 import { VideoGameListComponent } from './video-game-list/video-game-list.component';
+import { VideoGameItemComponent } from './video-game-list/video-game-item/video-game-item.component';
+import { FormsModule } from '@angular/forms';
+import { NewGameComponent } from './video-game-list/new-game/new-game.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     SidebarComponent,
     ProfileCardComponent,
-    VideoGameListComponent
+    VideoGameListComponent,
+    VideoGameItemComponent,
+    NewGameComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'TaskIt-Project';
+  title: 'Yessir'
+  videoGames = [{title: 'Test'}];
+
+  onGameAdded(gameData: {gameTitle: string}) {
+    this.videoGames.push({
+      title: gameData.gameTitle
+    });
+  }
 }
