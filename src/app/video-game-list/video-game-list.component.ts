@@ -1,29 +1,27 @@
-import { Component, OnInit } from '@angular/core';
-import { VideoGame, VideoGameModel } from '../shared/game.model';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
+import { VideoGameService } from '../shared/game.service';
+import { VideoGame } from '../shared/game.model';
 
 @Component({
   selector: 'app-video-game-list',
   templateUrl: './video-game-list.component.html',
   styleUrls: ['./video-game-list.component.css'],
-  providers: [VideoGameModel]
+  providers: [VideoGameService]
 })
 
-export class VideoGameListComponent implements OnInit {
-    videoGames: VideoGame[] = [];
+export class VideoGameListComponent {
+  videoGames: VideoGame[] = []
+  @Output('gameAdded') gameAdded = new EventEmitter<{title: string, description: string}>();
 
-    constructor(private VideoGameModel: VideoGameModel) {}
+  @ViewChild('gameDescInput', {static: true}) gameDescInput: ElementRef
 
-    ngOnInit() {
-      this.videoGames = this.VideoGameModel.videoGame;
-    }
-
-    deleteGame(id: number) {
-      this.VideoGameModel.deleteGame(id);
-    }
-
-    onNewGame() {
-      this.VideoGameModel.showVGModal('newVGModal');
-    }
-
+  onGameAdded(titleInput: HTMLInputElement) {
+    this.gameAdded.emit({
+      title: titleInput.value,
+      description: this.gameDescInput.nativeElement.value
+    })
   }
+
+}
+
 

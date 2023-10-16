@@ -1,22 +1,4 @@
-
-<div class="modal fade" id="newVGModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="newVGModalLabel">Add New Game</h1>
-      </div>
-      <div class="modal-body">
-        <form class="row g-3" id="newTaskForm">
-          <div class="col-12">
-            <label for="inputTitle" class="form-label">Title</label>
-            <input type="text" class="form-control" id="inputTitle" maxlength="25" placeholder="Title">
-          </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="resetForm()">Close</button>
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="newGame()">Add Game</button>
-      </div>
-    </div>
-  </div>
+<div>
+  <button class="btn btn-success btn-sm new-vg-btn mt-1"
+  (click)="newGame()">Add New Video Game</button>
 </div>

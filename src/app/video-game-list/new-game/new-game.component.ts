@@ -1,28 +1,23 @@
 import { Component } from '@angular/core';
-import { VideoGameModel, VideoGame } from 'src/app/shared/game.model';
+import { VideoGame } from 'src/app/shared/game.model';
+import { VideoGameService } from 'src/app/shared/game.service';
 
 @Component({
   selector: 'app-new-game',
   templateUrl: './new-game.component.html',
   styleUrls: ['./new-game.component.css'],
-  providers: [VideoGameModel]
+  providers: [VideoGameService]
 })
 export class NewGameComponent {
-  constructor(private videoGameModel: VideoGameModel) {}
+  constructor(private videoGameService: VideoGameService) {}
 
   newGame() {
-    const Form: HTMLFormElement = document.querySelector('#VGForm');
     const title: HTMLInputElement = document.querySelector('#inputTitle');
     const description: HTMLInputElement = document.querySelector('#inputDescription');
+    const tags: HTMLInputElement = document.querySelector('#inputTags');
 
-    const videoGame: VideoGame = new VideoGame(title.value, description.value);
+    const videoGame: VideoGame = new VideoGame(title.value, description.value, tags.value);
 
-    Form.reset();
-
-    this.videoGameModel.addVideoGame(videoGame);
-  }
-
-  resetForm() {
-    this.videoGameModel.resetForm('#VGForm');
+    this.videoGameService.addVideoGame(videoGame);
   }
 }
