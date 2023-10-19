@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { VideoGame } from 'src/app/shared/game.model';
 import { VideoGameService } from 'src/app/shared/game.service';
 
 @Component({
@@ -9,12 +8,10 @@ import { VideoGameService } from 'src/app/shared/game.service';
   providers: [VideoGameService]
 })
 export class NewGameComponent {
-
-
   constructor(private vgService: VideoGameService) {}
 
 
-  onNewGame(title: string, description: string) {
+  onNewGame(title: string, description: string, tags: string[]) {
     this.vgService.addVideoGame(title, description, tags)
   }
 }

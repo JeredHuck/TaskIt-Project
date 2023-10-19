@@ -3,12 +3,10 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-video-game-list></app-video-game-list>
-      <app-video-game-item
-      class="vgItem"
+      <app-video-game-list 
+      class="vgList"
       *ngFor="let videoGame of videoGames"
-      [vgElement]="videoGame"
-      ></app-video-game-item>
+      [vgElement]="videoGame"></app-video-game-list>
     </div>
   </div>
 </div>

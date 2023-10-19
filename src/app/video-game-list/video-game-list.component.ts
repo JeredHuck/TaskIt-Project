@@ -1,4 +1,4 @@
-import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { VideoGameService } from '../shared/game.service';
 import { VideoGame } from '../shared/game.model';
 
@@ -10,17 +10,7 @@ import { VideoGame } from '../shared/game.model';
 })
 
 export class VideoGameListComponent {
-  videoGames: VideoGame[] = []
-  @Output('gameAdded') gameAdded = new EventEmitter<{title: string, description: string}>();
-
-  @ViewChild('gameDescInput', {static: true}) gameDescInput: ElementRef
-
-  onGameAdded(titleInput: HTMLInputElement) {
-    this.gameAdded.emit({
-      title: titleInput.value,
-      description: this.gameDescInput.nativeElement.value
-    })
-  }
+  @Input() videoGames: {title: string, description: string, tags: string[]}
 
 }
 

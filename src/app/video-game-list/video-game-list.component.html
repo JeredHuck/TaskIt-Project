@@ -1,25 +1,6 @@
 <div class="container">
   <h1 class=>Video Game List</h1>
-  <input type="text"
-  class="form-control"
-  #titleInput
-  >
-  <input type="text"
-  class="form-control"
-  #gameDescInput
-  >
-  <div>
-    <button class="btn btn-success btn-sm new-vg-btn mt-1"
-    (click)="onGameAdded(titleInput)">Add New Video Game</button>
-  </div>
 </div>
 <div class="container">
   <app-new-game></app-new-game>
 </div>
-<div
-    class="flex-container"
-    *ngFor="let videoGame of videoGames">
-    <p id="title">{{ videoGame.title + ' ' }}</p>
-    <p id="description">{{ videoGame.description }}</p>
-</div>
-
