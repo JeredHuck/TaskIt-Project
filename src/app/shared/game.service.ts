@@ -1,10 +1,9 @@
-import { VideoGame } from "./game.model";
-
 export class VideoGameService {
   videoGames = [
-
+    {title: 'Zelda',
+     description: "It's pretty cool I suppose",
+     tags: ['adventure', 'high fantasy']}
   ]
-  vGIndex: number;
 
   addVideoGame(title: string, description: string, tags: string[]) {
     this.videoGames.push({title: title, description: description, tags: tags });

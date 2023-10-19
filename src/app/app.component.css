@@ -4,3 +4,6 @@
     box-sizing: border-box;
 }
 
+.container {
+  margin: 1rem 0 0 400px;
+}

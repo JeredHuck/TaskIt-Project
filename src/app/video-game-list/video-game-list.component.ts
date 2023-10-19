@@ -1,6 +1,5 @@
 import { Component, Input } from '@angular/core';
 import { VideoGameService } from '../shared/game.service';
-import { VideoGame } from '../shared/game.model';
 
 @Component({
   selector: 'app-video-game-list',
@@ -10,7 +9,9 @@ import { VideoGame } from '../shared/game.model';
 })
 
 export class VideoGameListComponent {
-  @Input() videoGames: {title: string, description: string, tags: string[]}
+  @Input() videoGame: {title: string, description: string, tags: string[]}
+
+  constructor(private vgService: VideoGameService) {}
 
 }
 

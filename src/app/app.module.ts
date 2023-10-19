@@ -7,6 +7,7 @@ import { ProfileCardComponent } from './sidebar/profile-card/profile-card.compon
 import { VideoGameListComponent } from './video-game-list/video-game-list.component';
 import { FormsModule } from '@angular/forms';
 import { NewGameComponent } from './video-game-list/new-game/new-game.component';
+import { VideoGameService } from './shared/game.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,7 @@ import { NewGameComponent } from './video-game-list/new-game/new-game.component'
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [VideoGameService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
