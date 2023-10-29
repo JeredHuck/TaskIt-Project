@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { VideoGame } from 'src/app/shared/game.model';
 import { VideoGameService } from 'src/app/shared/game.service';
 
 @Component({
@@ -8,6 +10,8 @@ import { VideoGameService } from 'src/app/shared/game.service';
   providers: [VideoGameService]
 })
 export class NewGameComponent {
+  @ViewChild('f') newGameForm: NgForm;
+
   constructor(private vgService: VideoGameService) {}
 
 

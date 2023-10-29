@@ -2,10 +2,8 @@
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-video-game-list 
-      *ngFor="let videoGame of videoGames"></app-video-game-list>
+      <router-outlet></router-outlet>
     </div>
-    <app-new-game></app-new-game>
   </div>
 </div>
-<router-outlet></router-outlet>
+

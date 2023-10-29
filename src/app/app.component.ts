@@ -7,12 +7,6 @@ import { VideoGameService } from './shared/game.service';
   styleUrls: ['./app.component.css'],
   providers: [VideoGameService]
 })
-export class AppComponent implements OnInit {
-  videoGames: {title: string, description: string, tags: string[]}[] = [];
+export class AppComponent {
 
-  constructor(private vgService: VideoGameService) {}
-
-  ngOnInit(): void {
-    this.videoGames = this.vgService.videoGames;
-  }
 }

@@ -1,0 +1,16 @@
+<a
+  style="cursor: pointer;"
+  [routerLink]="[index]"
+  routerLinkActive="active"
+  class="list-group-item clearfix">
+   <div class="pull-left">
+    <h4 class="list-group-item-heading">{{ videoGame.title }}</h4>
+    <p class="list-group-item-text">{{ videoGame.description }}</p>
+   </div>
+   <span class="pull-right">
+    <img
+      alt="{{ videoGame.title }}"
+      class="image-responsive"
+      style="max-height: 50px;">
+   </span>
+</a>

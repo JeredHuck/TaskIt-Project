@@ -1,4 +1,5 @@
 export class VideoGame {
+
   constructor(
     public title: string,
     public description: string,
