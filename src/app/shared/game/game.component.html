@@ -1,0 +1,12 @@
+<a
+  class="mb-3 list-group-item d-flex"
+  style="cursor:pointer;"
+  [routerLink]="[videoGame.id]"
+  routerLinkActive="active">
+
+  <div class="d-flex flex-column align-items-start">
+    <h4 class="list-group-item-heading">{{ videoGame.title }}</h4>
+    <p class="list-group-item-text mb-0">{{ videoGame.tags }}</p>
+  </div>
+
+</a>

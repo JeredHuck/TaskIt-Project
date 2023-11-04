@@ -5,9 +5,11 @@
 <hr>
 
 <div class="row">
-  <div class="col-xs-12">
-    <h5>{{ videoGame.title }}</h5>
-    <p>{{ videoGame.description }}</p>
-    <p>{{ videoGame.tags }}</p>
+  <div class="col-md-12 list-container">
+    <app-game
+    *ngFor="let videoGame of videoGames"
+    [videoGame]="videoGame"></app-game>
   </div>
 </div>
+
+<router-outlet></router-outlet>

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { VideoGameService } from '../shared/game.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class SidebarComponent {
 
+  constructor(private vgService: VideoGameService,
+              private router: Router) {}
+
+  newGameRoute() {
+    this.router.navigate([''])
+  }
 }

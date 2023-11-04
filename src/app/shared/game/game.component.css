@@ -1,0 +1,14 @@
+a {
+  border: 1px solid darkblue;
+  border-radius: 25px !important;
+  padding: 1.5em;
+  width: 70%;
+}
+
+a:hover {
+  background-color: #0275d8;
+}
+
+a:active {
+  background-color: #eee;
+}
