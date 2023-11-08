@@ -13,6 +13,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { VideoGameItemComponent } from './video-games/video-game-list/video-game-item/video-game-item.component';
 import { VideoGamesComponent } from './video-games/video-games.component';
 import { GameComponent } from './shared/game/game.component';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { GameComponent } from './shared/game/game.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    OverlayModule
   ],
   providers: [VideoGameService],
   bootstrap: [AppComponent]

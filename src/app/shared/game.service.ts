@@ -6,7 +6,6 @@ import { Injectable } from "@angular/core";
   providedIn: 'root'
 })
 export class VideoGameService {
-
   private videoGames: VideoGame[] = [
     new VideoGame(
       117,
@@ -51,6 +50,4 @@ export class VideoGameService {
     this.videoGames = games;
     this.vgListChanged.next(this.videoGames.slice());
   }
-
-
 }

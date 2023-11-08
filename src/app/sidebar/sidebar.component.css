@@ -23,3 +23,11 @@ html {
     margin: 50px;
     margin-left: 35px;
 }
+
+input.ng-invalid.ng-touched {
+  border: 1px solid red;
+}
+
+p {
+  color: red;
+}
