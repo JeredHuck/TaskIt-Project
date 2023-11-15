@@ -2,7 +2,7 @@ a {
   border: 1px solid darkblue;
   border-radius: 25px !important;
   padding: 1.5em;
-  width: 70%;
+  width: 150% !important;
 }
 
 a:hover {

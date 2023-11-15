@@ -1,5 +1,5 @@
 import { Subject } from "rxjs";
-import { VideoGame } from "./game.model";
+import { VideoGame } from "../shared/game.model";
 import { Injectable } from "@angular/core";
 
 @Injectable({
@@ -34,8 +34,22 @@ export class VideoGameService {
     return this.videoGames.slice();
   }
 
-  getVideoGame(index: number) {
-    return this.videoGames.slice()[index];
+  updateGame(gameId: number, updatedGame: Partial<VideoGame>) {
+    const gameIndex = this.videoGames.findIndex((game) => game.id === gameId); // Get index of book to update
+
+    if (gameIndex !== -1) {
+      // We found the book, now we update it with new values
+      this.videoGames[gameIndex] = {
+        ...this.videoGames[gameIndex], // Spread operator to get all the existing values
+        ...updatedGame, // Spread operator to get all the updated values
+        id: gameId, // Ensure the book ID stays the same
+      };
+
+      this.vgListChanged.next(this.videoGames.slice());
+    } else {
+      // Book wasn't found
+      console.error('Game not found, brother');
+    }
   }
 
   getGameById(id: number) {

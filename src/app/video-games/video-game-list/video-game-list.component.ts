@@ -3,7 +3,7 @@ import { Component,
          OnDestroy,
          OnInit,
          Output } from '@angular/core';
-import { VideoGameService } from '../../shared/game.service';
+import { VideoGameService } from '../game.service';
 import { VideoGame } from '../../shared/game.model';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
@@ -20,8 +20,7 @@ export class VideoGameListComponent implements OnInit, OnDestroy{
   gameSub: Subscription;
 
   constructor(private vgService: VideoGameService,
-              private router: Router,
-              private route: ActivatedRoute) {}
+              private router: Router) {}
 
   ngOnInit() {
     this.videoGames = this.vgService.getVideoGames();

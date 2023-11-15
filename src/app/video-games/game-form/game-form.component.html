@@ -1,0 +1,68 @@
+<!-- <div class="modal fade" id="gameModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="gameModal" aria-hidden="true">
+<div class="modal-dialog">
+<div class="modal-content">
+  <div class="modal-header">
+    <h5 class="modal-title" id="gameModal">Please Enter Details</h5>
+  </div>
+  <div class="modal-body"> -->
+<form (ngSubmit)="onSubmit(f)" #f="ngForm">
+  <div id="game-data" ngModelGroup="gameData" #gameData="ngModelGroup">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        ngModel
+        name="title"
+        required
+        #title="ngModel"
+      />
+      <p *ngIf="!title.valid && title.touched">Please enter a title</p>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea
+        name="descResp"
+        rows="3"
+        class="form-control"
+        #description="ngModel"
+        [ngModel]="isEditingGame ? gameData.title : null"
+      ></textarea>
+      <p *ngIf="!description.valid && description.touched">
+        Please enter a description
+      </p>
+    </div>
+    <div class="form-group">
+      <label for="tags">Tags</label>
+      <input
+        type="text"
+        class="form-control"
+        ngModel
+        name="tags"
+        required
+        #tags="ngModel"
+      />
+      <span *ngIf="!tags.valid && tags.touched" class="help-block"
+        >Please enter tag(s)</span
+      >
+    </div>
+  </div>
+  <button (click)="onResetForm()" type="button" class="btn-btn secondary mr-3">
+    Cancel
+  </button>
+  <button>
+    {{ isEditingGame ? "Update" : "Create" }}
+  </button>
+</form>
+<!-- </div>
+<div class="modal-footer">
+  <button (click)="onResetForm()" type="button" class="btn-btn secondary mr-3">
+    Cancel
+  </button>
+  <button>
+    {{ isEditingGame ? "Update" : "Create" }}
+  </button>
+</div>
+</div>
+</div>
+</div> -->

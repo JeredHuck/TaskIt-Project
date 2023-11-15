@@ -1,8 +1,8 @@
-import { Component, ViewChild } from '@angular/core';
-import { VideoGameService } from '../shared/game.service';
-import { Router } from '@angular/router';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { VideoGameService } from '../video-games/game.service';
+import { ActivatedRoute, Params, Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
-import { _ParseAST } from '@angular/compiler';
+import { VideoGame } from '../shared/game.model'
 
 @Component({
   selector: 'app-sidebar',
@@ -10,24 +10,11 @@ import { _ParseAST } from '@angular/compiler';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent {
-  @ViewChild('f') gameForm: NgForm;
-  submitted = false;
-  descResp = '';
-  gameData: {
-    title: '',
-    description: '',
-    tags: []
-  }
 
-  constructor(private vgService: VideoGameService,
-              private router: Router) {}
+  constructor(private router: Router) {}
 
-  newGameRoute() {
-    this.router.navigate([''])
-  }
 
-  onSubmit() {
-    // this.vgService.addVideoGame()
-    this.gameForm.reset()
+  navigateToForm() {
+    this.router.navigate(['game-list', 'new'])
   }
 }
